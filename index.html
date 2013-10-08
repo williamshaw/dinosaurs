@@ -1,6 +1,23 @@
 ---
 layout: default
+title:  Home
 ---
 
-	<h1>home</h1>
+	<h1>Home</h1>
 	<p>This is a paragraph of text and stuff and junk.</p>
+	
+	<ul>
+	 {% for page in site.pages %}
+	  {% if page.category == "dino" %}
+		<li>
+			<strong>{{page.name}}</strong>
+			{{page.content}}
+			<dl>
+				<dt>Size</dt><dd>{{page.size}}</dd>
+				<dt>Food</dt><dd>{{page.food}}</dd>
+				<dt>Colour</dt><dd>{{page.color}}</dd>
+			</dl>
+		</li>
+	  {% endif %}
+	 {% endfor %}
+	</ul>
