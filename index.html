@@ -6,19 +6,7 @@ layout: default
 <p>Dinosaurs are super rockin’!</p>
 
 <h2>Carnivores</h2>
-<ul>
-  {% for dino in site.pages %}
-    {% if dino.category == "carnivore" %}
-      <li>{{dino.name}}</li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include dino-list.html dinotype='carnivore' %}
 
 <h2>Herbivores</h2>
-<ul>
-  {% for dino in site.pages %}
-    {% if dino.category == "herbivore" %}
-      <li>{{dino.name}}</li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include dino-list.html dinotype='herbivore' %}

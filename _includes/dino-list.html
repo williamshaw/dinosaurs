@@ -1,0 +1,7 @@
+<ul class="list-group">
+  {% for dino in site.pages %}
+    {% if dino.category == include.dinotype %}
+      <li class="list-group-item">{{dino.name}}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
